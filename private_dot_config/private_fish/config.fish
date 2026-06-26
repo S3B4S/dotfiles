@@ -7,4 +7,5 @@ alias p="cd ~/Development/polars-cloud"
 alias pf="cd ~/Development/polars-cloud/frontend"
 alias l="eza -la"
 alias docker="orb docker"
-alias cm="chezmoi"
+
+abbr -a cm chezmoi
