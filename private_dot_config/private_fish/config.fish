@@ -4,10 +4,8 @@ end
 
 set -gx EDITOR 'code --wait'
 
-alias dev="cd ~/Development"
-alias p="cd ~/Development/polars-cloud"
-alias pf="cd ~/Development/polars-cloud/frontend"
-alias l="eza -la"
-alias docker="orb docker"
-
+abbr -a dev "cd ~/Development"
+abbr -a p "cd ~/Development/polars-cloud"
+abbr -a pf "cd ~/Development/polars-cloud/frontend"
+abbr -a l "eza -la"
 abbr -a cm chezmoi
