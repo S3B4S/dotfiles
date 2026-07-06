@@ -1,0 +1,14 @@
+onboarding = false
+
+[ui]
+agent_panel_sort = "spaces"
+show_agent_labels_on_pane_borders = false
+
+[ui.toast]
+delivery = "system"
+
+[ui.sound]
+enabled = false
+
+[terminal]
+default_shell = "/opt/homebrew/bin/fish"
