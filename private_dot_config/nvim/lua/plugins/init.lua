@@ -5,7 +5,6 @@ return {
 		opts = require("configs.conform"),
 	},
 
-	-- These are some examples, uncomment them if you want to see them work!
 	{
 		"neovim/nvim-lspconfig",
 		config = function()
@@ -16,6 +15,11 @@ return {
 	{
 		"nvim-telescope/telescope.nvim",
 		opts = require("configs.telescope"),
+	},
+
+	{
+		"nvim-tree/nvim-tree.lua",
+		opts = require("configs.nvimtree"),
 	},
 
 	-- test new blink
