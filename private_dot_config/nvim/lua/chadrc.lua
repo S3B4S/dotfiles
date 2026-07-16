@@ -28,13 +28,25 @@ M.ui = {
 				local root = (vim.fs.root(0, ".git") or vim.uv.cwd()) .. "/"
 				local rel = (bufname:sub(1, #root) == root) and bufname:sub(#root + 1) or bufname
 
+				local segments = {}
+				for seg in rel:gmatch("[^/]+") do
+					table.insert(segments, seg)
+				end
+
+				if #segments > 1 then
+					table.remove(segments, 1) -- drop the top-level dir (cwd we launched from)
+				end
+
+				for i = 1, math.min(2, #segments - 1) do
+					if #segments[i] > 4 then
+						segments[i] = segments[i]:sub(1, 4)
+					end
+				end
+
+				rel = table.concat(segments, "/")
+
 				local max_len = math.min(60, math.floor(vim.o.columns * 0.3))
 				if #rel > max_len then
-					local segments = {}
-					for seg in rel:gmatch("[^/]+") do
-						table.insert(segments, seg)
-					end
-
 					local out = table.remove(segments) -- filename, always kept whole
 					for i = #segments, 1, -1 do
 						local candidate = segments[i] .. "/" .. out
