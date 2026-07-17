@@ -1,4 +1,4 @@
-require "nvchad.mappings"
+require("nvchad.mappings")
 
 -- add yours here
 
@@ -15,3 +15,7 @@ map("n", "<leader>yp", function()
 	local rel = (abs:sub(1, #root) == root) and abs:sub(#root + 1) or abs
 	vim.fn.setreg("+", rel)
 end, { desc = "yank relative path" })
+
+map("n", "grr", function()
+	require("telescope.builtin").lsp_references()
+end, { buffer = bufnr, desc = "telescope lsp references" })
