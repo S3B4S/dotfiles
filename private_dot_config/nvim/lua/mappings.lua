@@ -17,5 +17,5 @@ map("n", "<leader>yp", function()
 end, { desc = "yank relative path" })
 
 map("n", "grr", function()
-	require("telescope.builtin").lsp_references()
+	require("telescope.builtin").lsp_references({ initial_mode = "normal" })
 end, { buffer = bufnr, desc = "telescope lsp references" })
