@@ -46,7 +46,7 @@ automatically-unhide-macos-hidden-apps = false
 # This config version is only available since 'config-version = 2'
 # Fallback value (if you omit the key): persistent-workspaces = []
 persistent-workspaces = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "B",
-                         "C", "D", "E", "G", "I", "M", "N", "O", "P", "Q",
+                         "C", "D", "E", "G", "M", "N", "O", "P", "Q",
                          "R", "S", "T", "U", "V", "W", "X", "Y"]
 
 # A callback that runs every time binding mode changes
@@ -140,7 +140,7 @@ on-mode-changed = []
     alt-e = 'workspace E'
     # alt-f = 'workspace F'
     alt-g = 'workspace G'
-    alt-i = 'workspace I'
+    # alt-i = 'workspace I'
     alt-m = 'workspace M'
     alt-n = 'workspace N'
     alt-o = 'workspace O'
