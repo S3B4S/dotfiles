@@ -19,3 +19,7 @@ end, { desc = "yank relative path" })
 map("n", "grr", function()
 	require("telescope.builtin").lsp_references({ initial_mode = "normal" })
 end, { buffer = bufnr, desc = "telescope lsp references" })
+
+vim.keymap.del("n", "<C-w>d")
+vim.keymap.del("n", "<C-w><C-d>")
+map("n", "<leader>dd", vim.diagnostic.open_float, { desc = "show diagnostic" })
