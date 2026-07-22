@@ -10,3 +10,6 @@ abbr -a p "cd ~/Development/polars-cloud"
 abbr -a pf "cd ~/Development/polars-cloud/frontend"
 abbr -a l "eza -la"
 abbr -a cm chezmoi
+
+zoxide init fish | source
+
