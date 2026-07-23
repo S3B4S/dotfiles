@@ -23,6 +23,13 @@ return {
 	},
 
 	{
+		"pmizio/typescript-tools.nvim",
+		ft = { "typescript", "javascript", "typescriptreact", "javascriptreact" },
+		dependencies = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
+		opts = {},
+	},
+
+	{
 		-- https://github.com/mrcjkb/rustaceanvim/#minimal-config
 		-- I strongly recommend against using rust-analyzer managed by mason.nvim, as version mismatches between
 		-- rust-analyzer and your project toolchain can and most likely will lead to subtle issues.
