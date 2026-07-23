@@ -32,7 +32,14 @@ return {
 		"pmizio/typescript-tools.nvim",
 		ft = { "typescript", "javascript", "typescriptreact", "javascriptreact" },
 		dependencies = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
-		opts = {},
+		opts = {
+			-- Root at the pnpm workspace root (e.g. frontend/) instead of the
+			-- nearest package's tsconfig.json (e.g. packages/components/).
+			root_dir = function(bufnr, on_dir)
+				local fname = vim.api.nvim_buf_get_name(bufnr)
+				on_dir(vim.fs.root(fname, { "pnpm-workspace.yaml", "turbo.json" }) or vim.fn.getcwd())
+			end,
+		},
 	},
 
 	{
