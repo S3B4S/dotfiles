@@ -22,6 +22,12 @@ return {
 		opts = require("configs.nvimtree"),
 	},
 
+	-- this opts will extend the default opts
+	{
+		"nvim-treesitter/nvim-treesitter",
+		opts = { ensure_installed = { "html", "css", "bash", "typescript", "tsx", "lua" } },
+	},
+
 	{
 		"pmizio/typescript-tools.nvim",
 		ft = { "typescript", "javascript", "typescriptreact", "javascriptreact" },
