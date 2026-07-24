@@ -3,7 +3,7 @@ if status is-interactive
 end
 
 set -gx EDITOR 'code --wait'
-set -gx PCLI_SCRIPTS_DIRECTORY /Users/kevin/Development/playground/polars-playground
+set -gx PCLI_SCRIPTS_DIRECTORY /Users/kevin/Development/polars-scripts/
 
 abbr -a dev "cd ~/Development"
 abbr -a p "cd ~/Development/polars-cloud"
