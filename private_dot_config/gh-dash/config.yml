@@ -90,6 +90,12 @@ keybindings:
         - key: H
           name: Copy as hyperlink
           command: "gh issue view {{ .IssueNumber }} --json title,url,number --jq '\"[#\\(.number): \\(.title)](\\(.url))\"' | pbcopy"
+        - key: b
+          name: Copy as branch name
+          command: >-
+            gh issue view {{ .IssueNumber }} --json number,title |
+            jq -j '"\(.number)_\(.title | ascii_downcase | gsub("[^a-z0-9]+"; "_") | gsub("^_|_$"; ""))"' |
+            pbcopy
 repoPaths: {}
 theme:
     ui:
