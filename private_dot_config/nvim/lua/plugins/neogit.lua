@@ -18,6 +18,16 @@ return {
   cmd = "Neogit",
   keys = {
     { "<leader>gg", "<cmd>Neogit<cr>", desc = "Show Neogit UI" }
-  }
+  },
+  opts = {
+    -- Add <C-j>/<C-k> next/previous in the built-in finder (e.g. branch
+    -- filtering); Neogit's default <C-n>/<C-p> stay mapped as well.
+    mappings = {
+      finder = {
+        ["<c-j>"] = "Next",
+        ["<c-k>"] = "Previous",
+      },
+    },
+  },
 }
 
